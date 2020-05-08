@@ -1,0 +1,16 @@
+server:
+  port: 9090
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    region: region1
+    serviceUrl:
+      zone1: http://service-registry:9090/eureka/
+    availability-zones:
+      region1: zone1
+  instance:
+    hostname: service-registry
+    metadata-map:
+      zone: zone1
+    

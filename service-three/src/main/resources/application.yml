@@ -1,0 +1,27 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /service3
+spring:
+  application:
+    name: service3
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: zone1
+  client:
+    prefer-same-zone-eureka: true
+    register-with-eureka: true
+    region: region1
+    service-url:
+      zone1: http://service-registry:9090/eureka/
+    availability-zones:
+      region1: zone1
+okta:
+  oauth2:
+    client-id: 0oaavk51pXZ0v8bUN4x6
+    client-secret:  oynmqgteH6HV6wLSyGFYU9dTuhtskEaBmX66HgCA 
+    issuer: https://dev-579270.okta.com/oauth2/default
+    scopes:
+    - openid
