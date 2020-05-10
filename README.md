@@ -26,7 +26,7 @@ To achive this, we are using spring-boot with micro-service architecture and bel
 ```sh
        $ mvn clean install
 ```
-- Build images for all the 5 components and start all the services
+- Build images for all the 5 components and start all the services in independent docker container
 ```sh
        $ docker-compose up --build
 ```
@@ -66,4 +66,7 @@ To achive this, we are using spring-boot with micro-service architecture and bel
 			]
 		v) Examine the server console log of gatway-service which is displaying all the request details from the h2 datbase
 		
-Step4: docker-compose down.
+- Stop all the containers
+```sh
+       $ docker-compose down
+```
