@@ -1,17 +1,17 @@
 # Spring boot with gateway, registry and hystrix
-The main aim of this project is to develope micro-service using Java 11, Spring framework components and Docker, implement an API gateway which forward all incoming requests to internal services with secure JWT token.
-To achive this, we are using spring-boot with micro-service architecture and below are the 3 important section will describe the details of this application,
+The main aim of this project is to develop micro-service using Java 11, Spring framework components and Docker, implement an API gateway which forward all incoming requests to internal services with secure JWT token.
+To achieve this, we are using spring-boot with micro-service architecture and below are the 3 important section will describe the details of this application,
 - Design and considerations
 - Limitations
 - Getting started / Usage Guide
 # Design and considerations!
   It has been designed 5 important components. They are,
-  - api-registry - where all the services are registered with service and client can dicovery the require service with unique name
-  - gatway-service - where the end-user can access all the internal services. This is also registered as part of api-registry since its require to find the internal service.
+  - api-registry - where all the services are registered with service and client can discovery the require service with unique name
+  - gateway-service - where the end-user can access all the internal services. This is also registered as part of api-registry since its require to find the internal service.
   - services - There 3 internal services called service-one, service-two and service-three and each service exposing one rest endpoint.
   - authorization server - We are using free-tier account of Okta authorization server for the secure communication among the various services using JWT token.
   - hystrix - To avoid cascade failure.
-  Dockorizing all the above components; 
+  Dockerizing all the above components; 
 
 # Limitations
 - No test cases involved in it
@@ -64,7 +64,7 @@ To achive this, we are using spring-boot with micro-service architecture and bel
 					  "msgTwo": "Test message two"	
 					}
 			]
-		v) Examine the server console log of gatway-service which is displaying all the request details from the h2 datbase
+		v) Examine the server console log of gateway-service which is displaying all the request details from the h2 database
 		
 - Stop all the containers
 ```sh

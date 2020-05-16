@@ -3,7 +3,7 @@ services:
   service-registry:
     restart: on-failure
     build: service-registry
-    container_name: service-registry1
+    container_name: service-registry
     image: service-registry:latest
     hostname: service-registry
     environment:
@@ -19,7 +19,7 @@ services:
   api-gateway:
     restart: on-failure
     build: api-gateway
-    container_name: api-gateway1
+    container_name: api-gateway
     image: api-gateway:latest
     hostname: api-gateway
     environment:
@@ -35,7 +35,7 @@ services:
   service-one:
     restart: on-failure
     build: service-one
-    container_name: service-one11
+    container_name: service-one
     image: service-one:latest
     hostname: service-one
     environment:
@@ -52,7 +52,7 @@ services:
   service-two:
     restart: on-failure
     build: service-two
-    container_name: service-two22
+    container_name: service-two
     image: service-two:latest
     hostname: service-two
     environment:
@@ -69,7 +69,7 @@ services:
   service-three:
     restart: on-failure
     build: service-three
-    container_name: service-three33
+    container_name: service-three
     image: service-three:latest
     hostname: service-three
     environment:
