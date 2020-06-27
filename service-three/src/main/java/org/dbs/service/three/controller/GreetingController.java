@@ -21,4 +21,10 @@ public class GreetingController {
 		final GreetingResponse greetingResponse = new GreetingResponse("/test3", requestBody);
 		return greetingResponse;
 	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/sleuthTest", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String sleuthTest() {
+		LOG.info("GET service3/sleuthTest");
+		return "Service-Three";
+	}
 }

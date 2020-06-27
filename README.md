@@ -56,14 +56,17 @@ To achieve this, we are using spring-boot with micro-service architecture and be
 	      PATCH http://localhost:8080/service3/test3
 		  Header: Authorization: Bearer <JWT Token>
 		  Body:
-		  	"messages":[
-					{
-					  "msgOne": "Test message one"	
-					},
-					{
-					  "msgTwo": "Test message two"	
-					}
-			]
+		  	{
+				"messages":
+					[
+					  	{
+					  		"msgOne": "Test message one"	
+					  	},
+					  	{
+					  		"msgTwo": "Test message two"	
+					  	}
+					]
+			}
 		v) Examine the server console log of gateway-service which is displaying all the request details from the h2 database
 		
 - Stop all the containers
